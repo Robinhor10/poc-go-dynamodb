@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  localstack:
+    image: localstack/localstack
+    container_name: localstack
+    environment:
+      - SERVICES=dynamodb
+      - DEBUG=1
+    ports:
+      - "4566:4566"
+      - "4571:4571"
+
+  app:
+    build: .
+    container_name: poc-go-dynamodb
+    ports:
+      - "8080:8080"
+    depends_on:
+      - localstack
+    environment:
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_REGION=us-east-1
+      - DYNAMODB_ENDPOINT=http://localstack:4566
