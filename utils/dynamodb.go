@@ -26,7 +26,7 @@ func GetItem(id string) (*models.Item, error) {
     }
 
     if result.Item == nil {
-        return nil, errors.New("item não encontrado")
+        return nil, errors.New("item not found")
     }
 
     item := new(models.Item)

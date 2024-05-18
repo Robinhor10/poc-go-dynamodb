@@ -4,7 +4,7 @@ Esta é uma API em Go que interage com o DynamoDB usando LocalStack. A API permi
 
 ## Estrutura do Projeto
 
-go-dynamodb-api/
+poc-go-dynamodb/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── main.go

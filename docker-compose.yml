@@ -10,6 +10,8 @@ services:
     ports:
       - "4566:4566"
       - "4571:4571"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"  # Montar o Docker socket
 
   app:
     build: .

@@ -5,7 +5,6 @@ import (
     "net/http"
 
     "github.com/gorilla/mux"
-    "poc-go-dynamodb/models"
     "poc-go-dynamodb/utils"
 )
 
